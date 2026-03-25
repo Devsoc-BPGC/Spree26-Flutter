@@ -52,7 +52,7 @@ class _PaymentSuccessState extends State<PaymentSuccess> {
                   height: 120.h,
                 ),
                 Text(
-                  'Payment\nSuccesful!',
+                  'Payment\nSuccessful!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Inter',
@@ -94,8 +94,8 @@ class _PaymentSuccessState extends State<PaymentSuccess> {
                 ),
                 SizedBox(height: 30.h),
                 Container(
-                  height: 80.h,
-                  width: 300.w,
+                  height: 150.h,
+                  width: 340.w,
                   padding: EdgeInsets.symmetric(
                     vertical: 20.h,
                     horizontal: 16.w,
@@ -104,21 +104,33 @@ class _PaymentSuccessState extends State<PaymentSuccess> {
                     color: Color(0xFF2A1E3F),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'Time: ${widget.time}, ${widget.date}',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 24.h,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                  child: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Time: ${widget.time}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 24.h,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 6.h),
-                    ],
+                        SizedBox(height:10.h),
+                        Text(
+                          'Date: ${widget.date}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 24.h,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 50.h),

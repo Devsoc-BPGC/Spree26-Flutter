@@ -73,8 +73,13 @@ class _PaymentFailedState extends State<PaymentFailed> {
                       _buildRow("Amount", "₹${widget.amount}"),
                       Divider(color: Colors.white.withOpacity(0.08)),
                       _buildRow(
-                        "Date & Time",
-                        "${widget.date} | ${widget.time}",
+                        "Date",
+                        "${widget.date}",
+                      ),
+                      Divider(color: Colors.white.withOpacity(0.08)),
+                      _buildRow(
+                        "Time",
+                        "${widget.time}",
                       ),
                       Divider(color: Colors.white.withOpacity(0.08)),
                       _buildRow("Vendor", widget.vendorName),
