@@ -122,22 +122,27 @@ class _PaymentSuccessState extends State<PaymentSuccess> {
                   ),
                 ),
                 SizedBox(height: 50.h),
-                Container(
-                  height: 56.h,
-                  width: 308.w,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF1E82BE),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Back to Home',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: 'Inter',
-                        fontSize: 16.h,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                GestureDetector(
+                  onTap: () {
+                    print('back to home');
+                  },
+                  child: Container(
+                    height: 56.h,
+                    width: 308.w,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF1E82BE),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Back to Home',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontSize: 16.h,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

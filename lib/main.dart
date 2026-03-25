@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:spree/Payments/payment_failed.dart';
 import 'package:spree/Payments/payment_success.dart';
 import 'package:spree/Payments/payments_home.dart';
 import 'package:spree/Payments/transaction_history.dart';
@@ -58,7 +59,7 @@ class MyApp extends StatelessWidget {
             colorScheme: .fromSeed(seedColor: Colors.deepPurple),
           ),
           //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-          home: PaymentSuccess(
+          home: PaymentFailed(
             amount: "120",
             vendorName: "Alex Smith",
             date: "2 Feb",
