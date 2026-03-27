@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:spree/Payments/enter_amount.dart';
 import 'package:spree/Payments/payment_failed.dart';
 import 'package:spree/Payments/payment_success.dart';
 import 'package:spree/Payments/payments_home.dart';
 import 'package:spree/Payments/transaction_history.dart';
 import 'package:spree/Screens/Sponsors/sponsors.dart';
 import 'package:spree/Screens/Homepage/homepage.dart';
+import 'package:spree/Screens/contactus.dart';
 import 'firebase_options.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-//import 'package:no_screenshot/no_screenshot.dart';
+import 'package:no_screenshot/no_screenshot.dart';
 import 'package:spree/Screens/login.dart';
-import 'package:spree/Payments/set_pin.dart';
-import 'package:spree/Payments/reset_pin.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +25,7 @@ void main() async {
 
   // Initialize services in parallel
   await Future.wait([
-    //NoScreenshot.instance.screenshotOff(),
+    NoScreenshot.instance.screenshotOff(),
     // Services().initialize(),
     // Config().initialize(),
   ]);
@@ -48,7 +47,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: .fromSeed(seedColor: Colors.deepPurple),
           ),
-          home: SetPin(),
+          home: ContactUs(),
         );
       },
     );
